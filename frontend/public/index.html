@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruthLens | News Verification</title>
+
+    <!-- Modern Typeface -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blob-bg">
+        <div class="blob shape1"></div>
+        <div class="blob shape2"></div>
+        <div class="blob shape3"></div>
+    </div>
+
+    <main class="glass-container">
+        <header>
+            <div class="logo">
+                <h1>TruthLens</h1>
+            </div>
+            <p>News Content Verification System</p>
+        </header>
+
+        <section class="input-section">
+            <textarea id="news-text" placeholder="Enter a news headline or article to analyze..." rows="6"></textarea>
+            <button id="analyze-btn" class="glowing-btn">
+                <span>Analyze</span>
+                <div class="loader hidden" id="spinner"></div>
+            </button>
+        </section>
+
+        <section class="results-section hidden" id="results">
+            <h2>Results</h2>
+            <div class="cards-wrapper">
+                
+                <!-- Ensemble Model Card -->
+                <div class="result-card" id="card-ensemble">
+                    <div class="card-header">
+                        <h3>Ensemble Model</h3>
+                        <span class="badge">TF-IDF</span>
+                    </div>
+                    <div class="prediction-value" id="res-ensemble-label">REAL</div>
+                    <div class="confidence-bar-container">
+                        <div class="confidence-bar" id="bar-ensemble"></div>
+                    </div>
+                    <div class="confidence-text">Confidence: <span id="conf-ensemble">98%</span></div>
+                </div>
+
+                <!-- DistilBERT Model Card -->
+                <div class="result-card" id="card-distilbert">
+                    <div class="card-header">
+                        <h3>DistilBERT Model</h3>
+                        <span class="badge">Transformer</span>
+                    </div>
+                    <div class="prediction-value" id="res-distilbert-label">FAKE</div>
+                    <div class="confidence-bar-container">
+                        <div class="confidence-bar" id="bar-distilbert"></div>
+                    </div>
+                    <div class="confidence-text">Confidence: <span id="conf-distilbert">95%</span></div>
+                </div>
+
+            </div>
+        </section>
+        
+        <div class="error-msg hidden" id="error-box"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

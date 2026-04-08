@@ -1,0 +1,21 @@
+# PyTorch with CUDA 12.6 support
+--extra-index-url https://download.pytorch.org/whl/cu126
+torch
+torchvision
+torchaudio
+
+# Data Manipulation & Preprocessing
+pandas
+numpy
+
+# Machine Learning & Ensemble (XGBoost, Random Forest, Logistic Regression)
+scikit-learn
+xgboost
+
+# Deep Learning & NLP (DistilBERT)
+transformers
+accelerate
+
+# Visualization & Evaluation
+matplotlib
+seaborn

@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+results/
+saved_distilbert/
+tmp_trainer/
+
+node_modules/
+package-lock.json
+
+*.xlsx
+*.pkl
+*.png
+*.csv
